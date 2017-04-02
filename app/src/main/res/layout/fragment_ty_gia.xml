@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:padding="@dimen/default_padding_big"
+                    android:background="@color/gray_light">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:background="@color/green" />
+
+                        <TextView
+                            android:id="@+id/tvBuy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Buy"
+                            android:textSize="@dimen/text_size_bigger" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:background="@color/orange" />
+
+                        <TextView
+                            android:id="@+id/tvTransfer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Transfer"
+                            android:textSize="@dimen/text_size_bigger" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:id="@+id/tvSell"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sell"
+                            android:textSize="@dimen/text_size_bigger" />
+                    </LinearLayout>
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_sync_white_24dp" />
+
+</RelativeLayout>
